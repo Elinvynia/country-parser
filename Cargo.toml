@@ -11,6 +11,14 @@ license = "MIT/Apache-2.0"
 version = "0.1.0"
 edition = "2018"
 
+build = "src/build.rs"
+
 [dependencies]
 ron = "0.6"
 serde = { version = "1.0", features = ["derive"] }
+lazy_static = "1.4"
+
+[build-dependencies]
+ron = "0.6"
+serde = { version = "1.0", features = ["derive"] }
+lazy_static = "1.4"
