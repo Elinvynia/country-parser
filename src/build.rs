@@ -13,9 +13,9 @@ struct Country {
 }
 
 fn main() {
-    println!("cargo:rerun-if-changed=build.rs");
+    println!("cargo:rerun-if-changed=src/build.rs");
     println!("cargo:rerun-if-changed=Cargo.lock");
-    println!("cargo:rerun-if-changed=data.ron");
+    println!("cargo:rerun-if-changed=src/data.ron");
 
     let out_dir = env::var_os("OUT_DIR").unwrap();
     let dest_path = Path::new(&out_dir).join("data.rs");
